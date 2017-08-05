@@ -28,3 +28,14 @@ $(function () {
         }
     })
 });
+
+/*---会到顶部----*/
+// 滑动滚动条
+$(window).scroll(function(){
+// 滚动条距离顶部的距离 大于 500px时
+if($(window).scrollTop() >= 500){
+$(".goUp").fadeIn(1000); // 开始淡入
+} else{
+$(".goUp").stop(true,true).fadeOut(1000); // 如果小于等于 500 淡出
+}
+});
